@@ -1,8 +1,18 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "outDir": "dist",
-    "lib": ["esnext"],
-    "esModuleInterop": true
+    /* --- Essential Module Options --- */
+    "target": "ES2022",                // Target a modern JS version
+    "module": "NodeNext",             // This is the key for modern Node.js ESM
+    "moduleResolution": "NodeNext",   // This resolves the 'undici-types' error
+
+    /* --- Output Options --- */
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    /* --- Other Best Practices --- */
+    "strict": false,
+    "esModuleInterop": true,          // Good for compatibility with older libraries
+    "skipLibCheck": true,             // Can help avoid issues in third-party type definitions
+    "forceConsistentCasingInFileNames": true
   }
 }
