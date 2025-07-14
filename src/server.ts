@@ -19,6 +19,6 @@ app.get('/', (req, res) => {
 console.log("it comes to this")
 app.use('/api', protect, router)
 app.post('/user', createNewUser)
-app.post('signin',signIn)
+app.post('/signin',signIn)
 
 export default app
